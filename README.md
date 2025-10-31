@@ -1,5 +1,9 @@
 ## Hi there 👋
 
+I am Cybro, interested in AI and math-based projects, constantly trying to learn from past mistakes, improve the projects and solve other's problems through my projects ( though I am just starting out ). 
+
+<!-- I would love it if you want to support [me](https://github.com/sponsors/thecybro) -->
+
 <!--
 **thecybro/thecybro** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
@@ -14,3 +18,5 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+
