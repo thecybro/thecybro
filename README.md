@@ -6,12 +6,12 @@
 
 ### 🛠️ Featured Projects
 
-#### 🛠️ [DataFlow Copilot](https://github.com/Revguard/DataFlow-Copilot)
+#### 🛠️ DataFlow Copilot
 * **The Mission:** A specialized VSCode extension designed to visualize complex **Pandas/Dataframe** logic in real-time.
 * **The Impact:** Solves the "Black Box" debugging problem in data-heavy ML pipelines.
 * *Tech: TypeScript, Python, VSCode Extension API*
 
-#### 📊 <!-- [Revguard](https://github.com/Revguard) | --> Churn Intelligence Engine (CIE) 
+#### 📊 Churn Intelligence Engine (CIE) 
 * **The Problem:** Subscription-based businesses losing revenue to predictable churn.
 * **The Solution:** A B2B SaaS that transforms raw telemetry into revenue-weighted retention strategies using XGBoost and SHAP explainability.
 * **Status:** In active development (Private Alpha).
