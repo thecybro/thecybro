@@ -6,6 +6,12 @@
 
 ### 🛠️ Featured Projects
 
+#### [GhostLayer](https://github.com/thecybro/GhostLayer) — Only you should be able to read your messages
+
+ * **The Mission:** Instantaneous message encryption/decryption of the messages between you and your friends
+ * **The Impact:** A privacy first Chrome extension that runs 100% locally in your device that offers instant message encryption that you can send to your friend and decrypt the message your friend sends to you, where everyone else seeing your messages wont know what you are sharing, EVEN IF you are in a group chat
+ * *Tech: Rust (for compilation to wasm), JavaScript (to interact with the browser directly and save/retrieve data from local storage) 
+
 #### 🛡️ [VibeCheck](https://github.com/thecybro/VibeCheck) — Sentiment Shield
 
   * **The Mission:** Real-time emotional guardrails for social media (Twitter, Reddit, LinkedIn).
@@ -18,11 +24,6 @@
   * **The Impact:** A security engine that intercepts native paste events to detect sensitive patterns (AWS, GitHub, Credit Cards) before they are submitted. Features a custom UI interceptor with power-user keyboard shortcuts.
   * *Tech: JavaScript (Chrome MV3), Regex-Engine, Local-First Whitelisting*
 
-#### 💰 Expense Tracker — Behavioral Finance Tool
-
-  * **The Mission:** Solving the "procrastination" barrier in personal finance management.
-  * **The Impact:** An iterative project that evolved from a Terminal MVP to a full GUI application. Built to solve real-world overspending habits through data visualization and comparison logic.
-  * *Tech: Python, Tkinter (GUI), Matplotlib (Data Viz)*
 
 -----
 
