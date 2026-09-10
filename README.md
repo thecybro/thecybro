@@ -1,64 +1,101 @@
-# 👋 Hi, I'm Cybro
+<div align="center">
 
-**Security & AI Systems Developer** | *Building tools that protect users from digital friction and human error.*
+# Cybro
 
------
+AI · Systems · Security · Rust
 
-### 🛠️ Featured Projects
+I build software at the intersection of AI, systems programming, and security.
 
-#### [GhostLayer](https://github.com/thecybro/GhostLayer) — Only you should be able to read your messages
+[GitHub](https://github.com/thecybro) · [Clannon Labs](https://github.com/Clannon-Labs)
 
- * **The Mission:** Instantaneous message encryption/decryption of the messages between you and your friends
- * **The Impact:** A privacy first Chrome extension that runs 100% locally in your device that offers instant message encryption that you can send to your friend and decrypt the message your friend sends to you, where everyone else seeing your messages wont know what you are sharing, EVEN IF you are in a group chat
- * *Tech: Rust (for compilation to wasm), JavaScript (to interact with the browser directly and save/retrieve data from local storage) 
-
-#### 🛡️ [VibeCheck](https://github.com/thecybro/VibeCheck) — Sentiment Shield
-
-  * **The Mission:** Real-time emotional guardrails for social media (Twitter, Reddit, LinkedIn).
-  * **The Impact:** A privacy-first Chrome extension powered by a **local FastAPI server** and HuggingFace Transformers. Classifies 28 emotions in \<800ms to filter toxic content entirely on-device.
-  * *Tech: TypeScript, Python, FastAPI, RoBERTa (NLP), Vite*
-
-#### 📑 [PasteShield](https://github.com/thecybro/PasteShield) — Credential Guard
-
-  * **The Mission:** Preventing accidental PII and API Key leakage in the browser.
-  * **The Impact:** A security engine that intercepts native paste events to detect sensitive patterns (AWS, GitHub, Credit Cards) before they are submitted. Features a custom UI interceptor with power-user keyboard shortcuts.
-  * *Tech: JavaScript (Chrome MV3), Regex-Engine, Local-First Whitelisting*
-
-
------
-
-### 🧪 Technical Focus & Stack
-  - **Mathematics:** Linear Algebra & Calculus for ML optimization.
-  - **Local-First ML:** Running NLP and classification models on-device for 100% data privacy.
-  - **AI/ML:** Predictive modeling, Feature Engineering, and Model Interpretability (XAI).
-  - **Architecture:** Scalable SaaS infrastructure and real-time data ingestion.
-  - **Browser Forensics:** Intercepting DOM events and system-level inputs to build safety guardrails.
-  - **Iterative Engineering:** Moving products from terminal-based prototypes to polished, user-facing interfaces.
-  - **Privacy Architecture:** Designing systems where no data ever leaves the user's machine.
+</div>
 
 ---
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white) ![Typescript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Pytorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white) ![Scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white) ![Polars](https://img.shields.io/badge/Polars-3D6C7A?style=for-the-badge&logo=polars&logoColor=white) ![Numpy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+## What I work on
+
+- **Systems software** in Rust — concurrent runtimes, sandboxed execution, services that stay correct under real load
+- **AI agent infrastructure** — orchestration, permissioned tool execution, persistent memory across sessions
+- **Applied security** — cryptographic protocols, container isolation, input sanitization pipelines
+- **Production-grade constraints** — bounded memory, capability-based auth, graceful failure, not demo-quality shortcuts
+
+I'd rather build the system underneath the API than wrap one and call it a product.
+
+## Selected projects
+
+### [Clannon](https://github.com/Clannon-Labs/Clannon)
+
+A multi-model AI orchestration platform. Client research briefs go in, a team of specialist agents researches them in parallel, every claim gets checked against its source before it reaches the user, and a memory layer carries context forward so the third project with a client doesn't start from zero.
+
+Grew into a full multi-service system: a FastAPI backend, a Next.js frontend streaming a live decision log as the orchestrator works, cross-provider model routing so no single provider's quota or outage can take a run down, and its own release process, specs, and docs.
+
+`Focus: AI orchestration · distributed systems · production infrastructure`
+
 ---
 
-### 📊 Performance Metrics
+### [Vraksha](https://github.com/Clannon-Labs/vraksha)
 
-| **Core Developer Stats** | **Language Proficiency** |
-| :--- | :--- |
-| ![Stats](https://github-readme-stats.vercel.app/api?username=thecybro&theme=tokyonight&show_icons=true) | ![Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=thecybro&theme=tokyonight&layout=compact) |
+The security-first agent runtime Clannon's pipeline is built on, distilled into a standalone CLI. Every input passes through a fixed pipeline before a model ever sees it:
 
-![Streak Stats](https://nirzak-streak-stats.vercel.app/?user=thecybro&theme=tokyonight&hide_border=false)
+```
+intake → sanitizer → normalizer → verifier → orchestrator → output filter → delivery
+```
+
+ClamAV/YARA scanning, modality-aware sanitization, a small model making the final safety call, and four memory tiers (wiki, semantic, episodic, procedural) with trust ordering so user-authored facts always win. Tools and expert agents self-register through one capability registry — adding a new one is a decorated file, no wiring.
+
+`Focus: AI agent security · orchestration · persistent memory · tool permissioning`
 
 ---
 
-### ✍️ Quotes
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
+### [Clanix](https://github.com/Clannon-Labs/Clanix)
 
-<!-- ---
+A local workbench that spins up a disposable Linux container and shows you exactly what happened inside it — real container PTY over WebSockets, timestamped process/file/network activity, and immutable workspace snapshots you can fork back into a fresh environment.
 
-### 📫 Connect with Me
-- **Current Goal:** Scaling Revguard to its first 10 beta users.
-- **Collaboration:** Open to discussing ML architecture and SaaS bootstrapping.
-- **Organization:** [Revguard on GitHub](https://github.com/Revguard) -->
+Runs on rootless Podman, capability-based auth (no passwords, no sessions — a private URL is the credential), and outbound networking disabled by default. It's careful about what it claims: sampled events are labeled as sampled, not pretended to be continuous tracing.
+
+`Focus: systems programming · sandboxing · Rust · WebSockets · security boundaries`
+
+---
+
+### [GhostLayer](https://github.com/thecybro/GhostLayer)
+
+End-to-end encryption for chat platforms that don't have it. A Chrome extension where the cryptographic core is written in Rust and compiled to WebAssembly — X25519 for key agreement, ChaCha20-Poly1305 for authenticated encryption. Keys are generated locally; there's no GhostLayer server or account.
+
+The protocol is versioned and independent of the extension, so any client could implement GhostLayer v1 without touching this codebase. Tested end-to-end on Discord, Slack, X, and Messenger.
+
+`Focus: Rust · WebAssembly · applied cryptography · browser internals`
+
+**Alpha. Not audited.** Limitations are documented in-repo, not hidden.
+
+---
+
+### [VibeCheck](https://github.com/thecybro/VibeCheck)
+
+A Chrome extension that filters emotionally harmful content out of your feed using a local NLP model — nothing leaves your machine. A `MutationObserver`-driven content script pulls post text, a local FastAPI service runs a RoBERTa model fine-tuned on GoEmotions, and posts crossing your sensitivity threshold get blurred with a one-click reveal.
+
+`Focus: local inference · NLP · TypeScript · FastAPI · browser extensions`
+
+## Engineering interests
+
+Currently going deeper into Rust and systems programming while keeping one foot in AI infrastructure. Areas I keep coming back to:
+
+- operating systems and kernel design
+- high-performance and concurrent systems
+- AI inference infrastructure
+- sandboxing and isolation
+- security engineering
+- local-first, private AI
+
+The common thread: understanding what's happening underneath the abstraction instead of trusting that it's magic.
+
+## Stack
+
+**Languages:** Rust · Python · TypeScript
+**Systems:** Tokio · Axum · Podman · Linux · WebAssembly
+**AI/ML:** PyTorch · Hugging Face · FastAPI
+
+## Elsewhere
+
+Most of my work lives across my personal repos and [Clannon Labs](https://github.com/Clannon-Labs).
+
+[View all repositories →](https://github.com/thecybro?tab=repositories)
