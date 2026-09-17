@@ -47,7 +47,7 @@ ClamAV/YARA scanning, modality-aware sanitization, a small model making the fina
 
 ---
 
-### [Clanix](https://github.com/Clannon-Labs/Clanix)
+### [Claven](https://github.com/Clannon-Labs/Claven)
 
 A local workbench that spins up a disposable Linux container and shows you exactly what happened inside it — real container PTY over WebSockets, timestamped process/file/network activity, and immutable workspace snapshots you can fork back into a fresh environment.
 
