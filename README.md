@@ -9,9 +9,20 @@ You can find my projects here;
 
 ---
 
-## What I work on
+## What I work on/looking forward to working on
 
 I am quite mostly focused on rust nowadays, so any upcoming project of mine will most probably be rust largely/only.
+
+Even though the repositories themselves are private (cuz i am still experimenting), I am working on developer tooling with my own interpreted 
+language as the scripting layer (to manage things config files don't allow you to do easily), which.. if went as I am invisioning it (and the signs
+are really positive), would allow you use the tool with config files as usual but also give you a super power to directly run the command script
+on the tool itself if you want it to do custom behaviour.
+
+The tool will allow us to run anything in a controlled manner which we can snapshot, observe, see diffs between diffs, create environment(s) dynamically
+or statically which will be created automatically for the programs you/we choose.
+We can also program the tool itself to do the behaviour we intend to make it do..
+
+More comming..
 
 - **Systems software**: OS/kernel, bare metal programming etc.. This is the most favorite field of mine; cuz why not?
    I am actively learning to eventually get into building my own OS from scratch.
@@ -28,6 +39,7 @@ I am quite mostly focused on rust nowadays, so any upcoming project of mine will
 I'd rather build the system underneath the API than wrap one and call it a product.
 
 ## Selected projects
+> These are public ones, private projects are still under development
 
 ### [Clannon](https://github.com/Clannon-Labs/Clannon)
 
@@ -85,7 +97,9 @@ A Chrome extension that filters emotionally harmful content out of your feed usi
 ## Stack
 
 **Languages:** Rust • C • C++ • Python • TypeScript
+
 **Systems:** Tokio · Axum · Podman · Linux · WebAssembly
+
 **AI/ML:** PyTorch · Hugging Face · FastAPI
 
 ## Elsewhere
