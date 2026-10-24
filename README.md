@@ -39,7 +39,7 @@ More comming..
 I'd rather build the system underneath the API than wrap one and call it a product.
 
 ## Selected projects
-> These are public ones, private projects are still under development
+> The projects I am currently working on are: [Clanix](https://github.com/Clannon-Labs/Clanix) and [Clannonic](https://github.com/thecybro/Clannonic/tree/upgrade)
 
 ### [Clannon](https://github.com/Clannon-Labs/Clannon)
 
